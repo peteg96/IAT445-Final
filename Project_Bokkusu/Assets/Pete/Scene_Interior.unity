@@ -892,6 +892,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: FPSController
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
       propertyPath: m_LocalPosition.x
       value: 2.3055034
@@ -7309,6 +7313,25 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d8f0fd10c75d8aa4b84b267c288866ba, type: 3}
+--- !u!1 &1249969695 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 111026, guid: 1818fdeb77c37444291960cc57a909ac,
+    type: 3}
+  m_PrefabInstance: {fileID: 2027740960}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1249969696
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1249969695}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2228035cf1a628f4897411c8cf267fa8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  light: {fileID: 1935552430}
 --- !u!1001 &1252183494
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7933,6 +7956,38 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1355071758}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1355422940 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 111026, guid: 1818fdeb77c37444291960cc57a909ac,
+    type: 3}
+  m_PrefabInstance: {fileID: 2059024304}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &1355422941
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1355422940}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.3570268, y: 2.082969, z: 1.4551961}
+  m_Center: {x: 0.48744023, y: 1.0392523, z: -0.5365249}
+--- !u!114 &1355422942
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1355422940}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2228035cf1a628f4897411c8cf267fa8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  light: {fileID: 1672564746}
 --- !u!4 &1356700936 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 458706, guid: 85a6aef5534f9c441b0081a2ffaa4621,
@@ -9662,6 +9717,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1672564747}
   - component: {fileID: 1672564748}
+  - component: {fileID: 1672564750}
+  - component: {fileID: 1672564749}
   m_Layer: 0
   m_Name: Point Light
   m_TagString: Untagged
@@ -9744,6 +9801,31 @@ Light:
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!114 &1672564749
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1672564746}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2228035cf1a628f4897411c8cf267fa8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  light: {fileID: 0}
+--- !u!114 &1672564750
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1672564746}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3bef213ff084e64d8a1e1c452dc77e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1674983070 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 446266, guid: 887972648c350c840b3f00bc5f3675d9,
