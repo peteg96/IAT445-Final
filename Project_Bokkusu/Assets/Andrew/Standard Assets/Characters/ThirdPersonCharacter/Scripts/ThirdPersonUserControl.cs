@@ -14,16 +14,6 @@ namespace UnityStandardAssets.Characters.ThirdPerson
         private bool m_Jump;                      // the world-relative desired move direction, calculated from the camForward and user input.
 
         
-
-        public float VelocityZ()
-        {
-            if (m_Move.magnitude > 1f) m_Move.Normalize();
-            return m_Move.magnitude;
-        }
-        public bool IsGrounded()
-        {
-            return m_Character.m_IsGrounded;
-        }
         private void Start()
         {
             // get the transform of the main camera
@@ -40,7 +30,6 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 
             // get the third person character ( this should never be null due to require component )
             m_Character = GetComponent<ThirdPersonCharacter>();
-            
         }
 
 
@@ -50,8 +39,6 @@ namespace UnityStandardAssets.Characters.ThirdPerson
             {
                 m_Jump = CrossPlatformInputManager.GetButtonDown("Jump");
             }
-
-           
         }
 
 
@@ -75,22 +62,9 @@ namespace UnityStandardAssets.Characters.ThirdPerson
                 // we use world-relative directions in the case of no main camera
                 m_Move = v*Vector3.forward + h*Vector3.right;
             }
-            if(Input.GetKeyUp(KeyCode.E ))
-            {
-                m_Character.Pick();
-            }
-
-            if (Input.GetKey(KeyCode.F))
-            {
-                m_Character.Push(true);
-            }
-            else
-            {
-                m_Character.Push(false);
-            }
 #if !MOBILE_INPUT
-            // walk speed multiplier
-            if (Input.GetKey(KeyCode.LeftShift)) m_Move *= 0.5f;
+			// walk speed multiplier
+	        if (Input.GetKey(KeyCode.LeftShift)) m_Move *= 0.5f;
 #endif
 
             // pass all parameters to the character control script

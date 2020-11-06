@@ -18,7 +18,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 
 		Rigidbody m_Rigidbody;
 		Animator m_Animator;
-		public bool m_IsGrounded;
+		bool m_IsGrounded;
 		float m_OrigGroundCheckDistance;
 		const float k_Half = 0.5f;
 		float m_TurnAmount;
@@ -28,7 +28,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 		Vector3 m_CapsuleCenter;
 		CapsuleCollider m_Capsule;
 		bool m_Crouching;
-        bool die = false;
+
 
 		void Start()
 		{
@@ -42,63 +42,37 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 			m_OrigGroundCheckDistance = m_GroundCheckDistance;
 		}
 
-        public void Die()
-        {
-            die = true;
-            m_Animator.SetTrigger("Die") ;
-            m_Capsule.height = m_Capsule.height /10f;
-            m_Capsule.center = m_Capsule.center / 10f;
-            transform.position = new Vector3(transform.position.x, transform.position.y / 2, transform.position.z);
-        }
 
-        public void Pick()
-        {
-            if (m_IsGrounded)
-            {
-                m_Animator.SetTrigger("Pickup");
-            }
-        }
-
-        public void Push(bool action)
-        {
-            if (m_IsGrounded)
-            {
-                m_Animator.SetBool("Pushing", action);
-            }
-        }
-
-        public void Move(Vector3 move, bool crouch, bool jump)
+		public void Move(Vector3 move, bool crouch, bool jump)
 		{
-            if (die == false)
-            {// convert the world relative moveInput vector into a local-relative
-             // turn amount and forward amount required to head in the desired
-             // direction.
-                if (move.magnitude > 1f) move.Normalize();
-                move = transform.InverseTransformDirection(move);
-                CheckGroundStatus();
-                move = Vector3.ProjectOnPlane(move, m_GroundNormal);
-                m_TurnAmount = Mathf.Atan2(move.x, move.z);
-                m_ForwardAmount = move.z;
 
-                ApplyExtraTurnRotation();
+			// convert the world relative moveInput vector into a local-relative
+			// turn amount and forward amount required to head in the desired
+			// direction.
+			if (move.magnitude > 1f) move.Normalize();
+			move = transform.InverseTransformDirection(move);
+			CheckGroundStatus();
+			move = Vector3.ProjectOnPlane(move, m_GroundNormal);
+			m_TurnAmount = Mathf.Atan2(move.x, move.z);
+			m_ForwardAmount = move.z;
 
-                // control and velocity handling is different when grounded and airborne:
-                if (m_IsGrounded)
-                {
-                    HandleGroundedMovement(crouch, jump);
-                }
-                else
-                {
-                    HandleAirborneMovement();
-                }
+			ApplyExtraTurnRotation();
 
+			// control and velocity handling is different when grounded and airborne:
+			if (m_IsGrounded)
+			{
+				HandleGroundedMovement(crouch, jump);
+			}
+			else
+			{
+				HandleAirborneMovement();
+			}
 
-                ScaleCapsuleForCrouching(crouch);
-                PreventStandingInLowHeadroom();
+			ScaleCapsuleForCrouching(crouch);
+			PreventStandingInLowHeadroom();
 
-                // send input and other state parameters to the animator
-                UpdateAnimator(move);
-            }
+			// send input and other state parameters to the animator
+			UpdateAnimator(move);
 		}
 
 
