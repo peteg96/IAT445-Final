@@ -1,0 +1,54 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78b2425a2284af743826c689403a4924, type: 3}
+  m_Name: DECSF Common LOD CrossFade
+  m_EditorClassIdentifier: 
+  m_functionInfo: "// Made with Amplify Shader Editor\n// Available at the Unity
+    Asset Store - http://u3d.as/y3X \n/*ASEBEGIN\nVersion=18502\n1982;67;1076;952;1590.913;704.2296;1.578926;True;False\nNode;AmplifyShaderEditor.SimpleMultiplyOpNode;2;-152.4247,-264.667;Inherit;False;2;2;0;FLOAT;0;False;1;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.StaticSwitch;5;71.57529,-344.667;Float;False;Property;_LOD_FADE_CROSSFADE;LOD_FADE_CROSSFADE;0;0;Fetch;False;0;0;False;0;False;1;0;0;False;LOD_FADE_CROSSFADE;Toggle;2;Key0;Key1;Fetch;False;True;9;1;FLOAT;0;False;0;FLOAT;0;False;2;FLOAT;0;False;3;FLOAT;0;False;4;FLOAT;0;False;5;FLOAT;0;False;6;FLOAT;0;False;7;FLOAT;0;False;8;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.RangedFloatNode;8;-565.5026,-344.667;Half;False;Constant;_Float1;Float
+    0;1;0;Create;True;0;0;False;0;False;1;0;0;0;0;1;FLOAT;0\nNode;AmplifyShaderEditor.FunctionInput;7;-411.0247,-344.667;Inherit;False;ALPHA_IN;1;0;False;1;0;FLOAT;1;False;1;FLOAT;0\nNode;AmplifyShaderEditor.DitheringNode;1;-876.4247,-205.667;Inherit;False;0;False;3;0;FLOAT;0;False;1;SAMPLER2D;;False;2;FLOAT4;0,0,0,0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.DitheringNode;3;-876.4247,-125.667;Inherit;False;1;False;3;0;FLOAT;0;False;1;SAMPLER2D;;False;2;FLOAT4;0,0,0,0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.LODFadeNode;4;-1068.425,-205.667;Inherit;False;0;5;FLOAT4;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4\nNode;AmplifyShaderEditor.FunctionSubtitle;10;-650.2449,-207.669;Inherit;False;Dither
+    Type 4x4 ;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.FunctionSubtitle;11;-645.2449,-133.6689;Inherit;False;Dither
+    Type 8x8;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.FunctionSwitch;6;-408.4247,-215.3239;Inherit;False;Mode
+    Dither Type;False;1;2;-1;4x4 Bayer;8x8 Bayer;Object;-1;9;0;FLOAT;0;False;1;FLOAT;0;False;2;FLOAT;0;False;3;FLOAT;0;False;4;FLOAT;0;False;5;FLOAT;0;False;6;FLOAT;0;False;7;FLOAT;0;False;8;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.FunctionOutput;9;391.5753,-344.667;Inherit;False;True;-1;ALPHA_OUT;0;False;1;0;FLOAT;0;False;1;FLOAT;0\nWireConnection;2;0;7;0\nWireConnection;2;1;6;0\nWireConnection;5;1;7;0\nWireConnection;5;0;2;0\nWireConnection;7;0;8;0\nWireConnection;1;0;4;1\nWireConnection;3;0;4;1\nWireConnection;10;0;1;0\nWireConnection;11;0;3;0\nWireConnection;6;0;10;0\nWireConnection;6;1;11;0\nWireConnection;9;0;5;0\nASEEND*/\n//CHKSM=908F5085F7D4C0399B7C2BF3B2AFDA34D0782B30"
+  m_functionName: 
+  m_description: 'Common LOD CrossFade
+
+    Dither 4x4 create 16 unique dither layers
+
+    Dither
+    8x8 create 64 unique dither layers'
+  m_additionalIncludes:
+    m_additionalIncludes: []
+    m_outsideIncludes: []
+  m_additionalPragmas:
+    m_additionalPragmas: []
+    m_outsidePragmas: []
+  m_additionalDirectives:
+    m_validData: 0
+    m_isDirty: 1
+    m_moduleName: ' Additional Directives'
+    m_independentModule: 1
+    m_additionalDirectives:
+    - {fileID: 0}
+    m_shaderFunctionDirectives: []
+    m_nativeDirectives: []
+    m_nativeDirectivesIndex: -1
+    m_nativeDirectivesFoldout: 0
+    m_directivesSaveItems:
+    - LineType: 2
+      LineValue: multi_compile __ LOD_FADE_CROSSFADE
+      GUIDToggle: 0
+      GUIDValue: 
+      Origin: 2
+  m_nodeCategory: 0
+  m_customNodeCategory: DECSF
+  m_previewPosition: 0
+  m_hidden: 0

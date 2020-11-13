@@ -1,0 +1,19 @@
+LICENSING – 2020©by AE Alexander Elert
+This Asset is governed by the Asset Store EULA https://unity3d.com/de/legal/as_terms
+By installing, copying, accessing, downloading or otherwise using the Assets, End User agrees to be 
+bound the provisions of this EULA. All definitions of the Terms shall also apply in this EULA unless 
+the context clearly provides for a different understanding.
+
+Frequently Asked Questions:
+Can I use these Assets on my Game Project?
+Yes. You can use it for production like Video Games, 3D Renders, Film or any interactive applications created with Unity®.
+
+Can I redistribute or sell these Assets?
+No. You can't resell or redistribute these assets. If you need an extended licence or any custom solution please contact us.
+
+Contact and support information:
+e-mail: alexanderelert@outlook.com
+discord: https://discord.gg/NJZhZVY
+Check my other assets for sale on: https://assetstore.unity.com/publishers/46732
+
+ 

@@ -1,0 +1,42 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78b2425a2284af743826c689403a4924, type: 3}
+  m_Name: DECSF Common Diffusion Profile HDRP
+  m_EditorClassIdentifier: 
+  m_functionInfo: "// Made with Amplify Shader Editor\n// Available at the Unity
+    Asset Store - http://u3d.as/y3X \n/*ASEBEGIN\nVersion=18501\n303.5;9;1512;968;1005;487;1;True;False\nNode;AmplifyShaderEditor.CommentaryNode;1;-354.5947,-161.8511;Inherit;False;320.1844;292.6534;Diffusion
+    Profile;2;3;2;;0.06603771,0.06603771,0.06603771,1;0;0\nNode;AmplifyShaderEditor.DiffusionProfileNode;2;-309.5947,-118.8511;Float;False;Property;_DiffusionProfileHash;Diffusion
+    Profile;0;1;[HideInInspector];Create;False;0;0;False;2;Header(SHADER VERSION
+    1.0 HDRP 7_4_1);Header(GLOBAL SETTINGS);False;0;0;False;0;1;FLOAT;0\nNode;AmplifyShaderEditor.Vector4Node;3;-310.811,-46.29712;Inherit;False;Property;_DiffusionProfileAsset;_DiffusionProfileAsset;1;1;[HideInInspector];Create;False;0;0;True;0;False;0,0,0,0;0,0,0,0;0;5;FLOAT4;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4\nNode;AmplifyShaderEditor.FunctionOutput;0;-8,-116;Inherit;False;True;-1;DIFFUSION_PROFILE_OUT;0;False;1;0;FLOAT;0;False;1;FLOAT;0\nWireConnection;0;0;2;0\nASEEND*/\n//CHKSM=50C2E6ED28CFC0EA17AA5B21AA84DC2506A20621"
+  m_functionName: 
+  m_description: "Common Diffusion Profile \nHDRP"
+  m_additionalIncludes:
+    m_additionalIncludes: []
+    m_outsideIncludes: []
+  m_additionalPragmas:
+    m_additionalPragmas: []
+    m_outsidePragmas: []
+  m_additionalDirectives:
+    m_validData: 0
+    m_isDirty: 0
+    m_moduleName: ' Additional Directives'
+    m_independentModule: 1
+    m_additionalDirectives: []
+    m_shaderFunctionDirectives: []
+    m_nativeDirectives: []
+    m_nativeDirectivesIndex: -1
+    m_nativeDirectivesFoldout: 0
+    m_directivesSaveItems: []
+  m_nodeCategory: 0
+  m_customNodeCategory: DECSF
+  m_previewPosition: 0
+  m_hidden: 0

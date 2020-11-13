@@ -1,0 +1,45 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78b2425a2284af743826c689403a4924, type: 3}
+  m_Name: DECSF Common Sampler State
+  m_EditorClassIdentifier: 
+  m_functionInfo: "// Made with Amplify Shader Editor\n// Available at the Unity
+    Asset Store - http://u3d.as/y3X \n/*ASEBEGIN\nVersion=18502\n1982;67;1076;952;1009.825;604.0101;1.69776;True;False\nNode;AmplifyShaderEditor.CommentaryNode;11;-355.0513,-472.5072;Inherit;False;179;257;Repeat;3;27;20;19;;0,0,0,1;0;0\nNode;AmplifyShaderEditor.CommentaryNode;12;-356.1474,-197.2649;Inherit;False;179;257;Clamp;3;18;17;16;;0,0,0,1;0;0\nNode;AmplifyShaderEditor.CommentaryNode;13;-342.7779,359.0121;Inherit;False;179;257;Mirror-One;3;23;21;15;;0,0,0,1;0;0\nNode;AmplifyShaderEditor.CommentaryNode;14;-351.9927,81.27258;Inherit;False;179;257;Mirror;3;26;25;24;;0,0,0,1;0;0\nNode;AmplifyShaderEditor.SamplerStateNode;16;-338.1474,-88.26483;Inherit;False;1;1;1;2;-1;1;0;SAMPLER2D;;False;1;SAMPLERSTATE;0\nNode;AmplifyShaderEditor.SamplerStateNode;25;-333.9927,123.2726;Inherit;False;2;2;2;1;-1;1;0;SAMPLER2D;;False;1;SAMPLERSTATE;0\nNode;AmplifyShaderEditor.SamplerStateNode;24;-333.9927,190.2726;Inherit;False;2;2;2;2;-1;1;0;SAMPLER2D;;False;1;SAMPLERSTATE;0\nNode;AmplifyShaderEditor.SamplerStateNode;27;-337.0513,-430.5072;Inherit;False;0;0;0;1;-1;1;0;SAMPLER2D;;False;1;SAMPLERSTATE;0\nNode;AmplifyShaderEditor.SamplerStateNode;21;-324.7779,468.012;Inherit;False;3;3;3;2;-1;1;0;SAMPLER2D;;False;1;SAMPLERSTATE;0\nNode;AmplifyShaderEditor.SamplerStateNode;18;-338.1474,-155.2649;Inherit;False;1;1;1;1;-1;1;0;SAMPLER2D;;False;1;SAMPLERSTATE;0\nNode;AmplifyShaderEditor.SamplerStateNode;17;-337.1474,-18.26492;Inherit;False;1;1;1;0;-1;1;0;SAMPLER2D;;False;1;SAMPLERSTATE;0\nNode;AmplifyShaderEditor.SamplerStateNode;23;-323.7779,538.0121;Inherit;False;3;3;3;0;-1;1;0;SAMPLER2D;;False;1;SAMPLERSTATE;0\nNode;AmplifyShaderEditor.FunctionSwitch;30;-113.4404,164.6846;Inherit;False;Sample
+    State;False;1;3;1;Bilinear ;Trilinear; Point;Instance;28;9;0;SAMPLERSTATE;;False;1;SAMPLERSTATE;;False;2;SAMPLERSTATE;;False;3;FLOAT;0;False;4;FLOAT;0;False;5;FLOAT;0;False;6;FLOAT;0;False;7;FLOAT;0;False;8;FLOAT;0;False;1;SAMPLERSTATE;0\nNode;AmplifyShaderEditor.SamplerStateNode;15;-325.8648,401.0121;Inherit;False;3;3;3;1;-1;1;0;SAMPLER2D;;False;1;SAMPLERSTATE;0\nNode;AmplifyShaderEditor.FunctionSwitch;28;-125.0513,-401.5073;Inherit;False;Filter
+    Mode;False;1;3;1;Bilinear ;Trilinear; Point;Object;-1;9;0;SAMPLERSTATE;;False;1;SAMPLERSTATE;;False;2;SAMPLERSTATE;;False;3;FLOAT;0;False;4;FLOAT;0;False;5;FLOAT;0;False;6;FLOAT;0;False;7;FLOAT;0;False;8;FLOAT;0;False;1;SAMPLERSTATE;0\nNode;AmplifyShaderEditor.SamplerStateNode;20;-336.0513,-293.5073;Inherit;False;0;0;0;0;-1;1;0;SAMPLER2D;;False;1;SAMPLERSTATE;0\nNode;AmplifyShaderEditor.SamplerStateNode;19;-337.0513,-363.5074;Inherit;False;0;0;0;2;-1;1;0;SAMPLER2D;;False;1;SAMPLERSTATE;0\nNode;AmplifyShaderEditor.SamplerStateNode;26;-332.9927,260.2726;Inherit;False;2;2;2;0;-1;1;0;SAMPLER2D;;False;1;SAMPLERSTATE;0\nNode;AmplifyShaderEditor.FunctionSwitch;22;166.0039,-7.067719;Inherit;False;Wrap
+    Mode;False;0;4;0;Repeat;Clamp;Mirror;Mirror One;Object;-1;9;0;SAMPLERSTATE;;False;1;SAMPLERSTATE;;False;2;SAMPLERSTATE;;False;3;SAMPLERSTATE;0;False;4;SAMPLERSTATE;0;False;5;FLOAT;0;False;6;FLOAT;0;False;7;FLOAT;0;False;8;FLOAT;0;False;1;SAMPLERSTATE;0\nNode;AmplifyShaderEditor.FunctionSwitch;29;-122.1559,-124.8294;Inherit;False;Sample
+    State;False;1;3;1;Bilinear ;Trilinear; Point;Instance;28;9;0;SAMPLERSTATE;;False;1;SAMPLERSTATE;;False;2;SAMPLERSTATE;;False;3;FLOAT;0;False;4;FLOAT;0;False;5;FLOAT;0;False;6;FLOAT;0;False;7;FLOAT;0;False;8;FLOAT;0;False;1;SAMPLERSTATE;0\nNode;AmplifyShaderEditor.FunctionSwitch;31;-101.8909,461.1692;Inherit;False;Sample
+    State;False;1;3;1;Bilinear ;Trilinear; Point;Instance;28;9;0;SAMPLERSTATE;;False;1;SAMPLERSTATE;;False;2;SAMPLERSTATE;;False;3;FLOAT;0;False;4;FLOAT;0;False;5;FLOAT;0;False;6;FLOAT;0;False;7;FLOAT;0;False;8;FLOAT;0;False;1;SAMPLERSTATE;0\nNode;AmplifyShaderEditor.FunctionOutput;0;474,-10;Inherit;False;True;-1;SS_OUT;0;True;1;0;SAMPLERSTATE;0;False;1;SAMPLERSTATE;0\nWireConnection;30;0;25;0\nWireConnection;30;1;24;0\nWireConnection;30;2;26;0\nWireConnection;28;0;27;0\nWireConnection;28;1;19;0\nWireConnection;28;2;20;0\nWireConnection;22;0;28;0\nWireConnection;22;1;29;0\nWireConnection;22;2;30;0\nWireConnection;22;3;31;0\nWireConnection;29;0;18;0\nWireConnection;29;1;16;0\nWireConnection;29;2;17;0\nWireConnection;31;0;15;0\nWireConnection;31;1;21;0\nWireConnection;31;2;23;0\nWireConnection;0;0;22;0\nASEEND*/\n//CHKSM=A71680E93A8C4FE17F3FA0E7A8B4B38169D044E5"
+  m_functionName: 
+  m_description: "Common Sampler State\nRepeat _ Bilinear \nRepeat _ Trilinear\nRepeat
+    _ Point"
+  m_additionalIncludes:
+    m_additionalIncludes: []
+    m_outsideIncludes: []
+  m_additionalPragmas:
+    m_additionalPragmas: []
+    m_outsidePragmas: []
+  m_additionalDirectives:
+    m_validData: 0
+    m_isDirty: 0
+    m_moduleName: ' Additional Directives'
+    m_independentModule: 1
+    m_additionalDirectives: []
+    m_shaderFunctionDirectives: []
+    m_nativeDirectives: []
+    m_nativeDirectivesIndex: -1
+    m_nativeDirectivesFoldout: 0
+    m_directivesSaveItems: []
+  m_nodeCategory: 0
+  m_customNodeCategory: DECSF
+  m_previewPosition: 0
+  m_hidden: 0

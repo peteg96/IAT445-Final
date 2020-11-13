@@ -1,0 +1,56 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78b2425a2284af743826c689403a4924, type: 3}
+  m_Name: DECSF Common Water Refraction Standard
+  m_EditorClassIdentifier: 
+  m_functionInfo: "// Made with Amplify Shader Editor\n// Available at the Unity
+    Asset Store - http://u3d.as/y3X \n/*ASEBEGIN\nVersion=18502\n2038;69;1522;952;1396.256;1550.936;1.20392;True;False\nNode;AmplifyShaderEditor.CustomExpressionNode;61;474.4622,-881.917;Float;False;#if
+    UNITY_UV_STARTS_AT_TOP$if (_CameraDepthTexture_TexelSize.y < 0) {$\tuv.y = 1
+    - uv.y@$}$#endif$return (floor(uv * _CameraDepthTexture_TexelSize.zw) + 0.5)
+    * abs(_CameraDepthTexture_TexelSize.xy)@;2;False;1;True;uv;FLOAT2;0,0;In;;Float;False;AlignWithGrabTexel;False;True;0;1;0;FLOAT2;0,0;False;1;FLOAT2;0\nNode;AmplifyShaderEditor.NormalVertexDataNode;19;-986.5413,-840.3969;Inherit;False;0;5;FLOAT3;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4\nNode;AmplifyShaderEditor.RegisterLocalVarNode;78;-711.9761,-996.8994;Inherit;False;REFACTED_SCALE_FLOAT;-1;True;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.RangedFloatNode;39;-1001.536,-998.3906;Float;False;Property;_RefractionScale;Refraction
+    Scale;0;0;Create;True;0;0;False;1;Header (REFRACTION);False;0.2;0.5;0;1;0;1;FLOAT;0\nNode;AmplifyShaderEditor.SimpleMultiplyOpNode;60;-52.3654,-1150.78;Inherit;False;2;2;0;FLOAT;0;False;1;FLOAT3;0,0,0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.ScreenPosInputsNode;57;-104.9996,-1038.522;Float;False;1;False;0;5;FLOAT4;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4\nNode;AmplifyShaderEditor.SimpleDivideOpNode;67;763.6351,-1118.774;Inherit;False;2;0;FLOAT;0;False;1;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.SaturateNode;63;597.0135,-1074.854;Inherit;False;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.RegisterLocalVarNode;84;-628.7738,-843.0001;Inherit;False;NORMAL_IN;-1;True;1;0;FLOAT3;0,0,0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.ScreenColorNode;53;638.3773,-885.646;Float;False;Global;_GrabScreen2;Grab
+    Screen 0;5;0;Create;True;0;0;False;0;False;Object;-1;False;False;1;0;FLOAT2;0,0;False;5;COLOR;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4\nNode;AmplifyShaderEditor.SaturateNode;66;1323.383,-1072.592;Inherit;False;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.RangedFloatNode;68;887.8896,-1008.964;Float;False;Constant;_Float13;Float
+    6;31;0;Create;True;0;0;False;0;False;0;0;0;0;0;1;FLOAT;0\nNode;AmplifyShaderEditor.CustomExpressionNode;65;193.0573,-1095.723;Float;False;FinalColor.a
+    = 1@;7;False;3;True;SurfaceIn;OBJECT;0;In;Input;Float;False;True;SurfaceOut;OBJECT;0;In;SurfaceOutputStandard;Float;False;True;FinalColor;OBJECT;0;InOut;fixed4;Float;False;ResetAlpha;False;True;0;4;0;FLOAT;0;False;1;OBJECT;0;False;2;OBJECT;0;False;3;OBJECT;0;False;2;FLOAT;0;OBJECT;4\nNode;AmplifyShaderEditor.StaticSwitch;76;1044.121,-1078.3;Float;False;Property;_Keyword3;Keyword
+    0;31;0;Create;True;0;0;True;0;False;0;0;0;False;UNITY_PASS_FORWARDADD;Toggle;2;Key0;Key1;Fetch;False;True;9;1;FLOAT;0;False;0;FLOAT;0;False;2;FLOAT;0;False;3;FLOAT;0;False;4;FLOAT;0;False;5;FLOAT;0;False;6;FLOAT;0;False;7;FLOAT;0;False;8;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.GetLocalVarNode;85;-361.9704,-1209.235;Inherit;False;78;REFACTED_SCALE_FLOAT;1;0;OBJECT;;False;1;FLOAT;0\nNode;AmplifyShaderEditor.GetLocalVarNode;71;-283.6052,-1119.731;Inherit;False;84;NORMAL_IN;1;0;OBJECT;;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.CustomExpressionNode;55;186.3461,-955.897;Float;False;float2
+    uvOffset = tangentSpaceNormal.xy@$uvOffset.y *= _CameraDepthTexture_TexelSize.z
+    * abs(_CameraDepthTexture_TexelSize.y)@$uv = AlignWithGrabTexel((screenPos.xy
+    + uvOffset) / screenPos.w)@$$float backgroundDepth = LinearEyeDepth(SAMPLE_DEPTH_TEXTURE(_CameraDepthTexture,
+    uv))@$float surfaceDepth = UNITY_Z_0_FAR_FROM_CLIPSPACE(screenPos.z)@$float depthDifference
+    = backgroundDepth - surfaceDepth@$$uvOffset *= saturate(depthDifference)@$uv
+    = AlignWithGrabTexel((screenPos.xy + uvOffset) / screenPos.w)@$backgroundDepth
+    = LinearEyeDepth(SAMPLE_DEPTH_TEXTURE(_CameraDepthTexture, uv))@$return depthDifference
+    = backgroundDepth - surfaceDepth@;1;False;3;True;tangentSpaceNormal;FLOAT3;0,0,0;In;;Float;False;True;screenPos;FLOAT4;0,0,0,0;In;;Float;False;True;uv;FLOAT2;0,0;InOut;;Float;False;GetRefractedDepth;True;False;0;3;0;FLOAT3;0,0,0;False;1;FLOAT4;0,0,0,0;False;2;FLOAT2;0,0;False;2;FLOAT;0;FLOAT2;3\nNode;AmplifyShaderEditor.Vector4Node;23;-199.2286,-837.7795;Inherit;False;Global;_CameraDepthTexture_TexelSize;_CameraDepthTexture_TexelSize;21;0;Create;True;0;0;True;0;False;0,0,0,0;0.0007092198,0.0009784736,1410,1022;0;5;FLOAT4;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4\nNode;AmplifyShaderEditor.RangedFloatNode;58;462.4936,-1152.865;Float;False;Constant;_RefractedDepth2;Refracted
+    Depth;16;0;Create;True;0;0;False;0;False;0;0;0;20;0;1;FLOAT;0\nNode;AmplifyShaderEditor.FunctionInput;18;-809.244,-843.5429;Inherit;False;NORMAL_IN;3;0;False;1;0;FLOAT3;0,0,0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.FunctionOutput;34;1473.197,-1073.941;Inherit;False;False;-1;REFRACTED_UV_OUT;1;False;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.FunctionOutput;92;818.8565,-875.2675;Inherit;False;True;-1;REFRACTED_DEPTH_OUT;0;False;1;0;COLOR;0,0,0,0;False;1;COLOR;0\nWireConnection;61;0;55;3\nWireConnection;78;0;39;0\nWireConnection;60;0;85;0\nWireConnection;60;1;71;0\nWireConnection;67;1;58;0\nWireConnection;63;0;55;0\nWireConnection;84;0;18;0\nWireConnection;53;0;61;0\nWireConnection;66;0;76;0\nWireConnection;76;1;63;0\nWireConnection;76;0;68;0\nWireConnection;55;0;60;0\nWireConnection;55;1;57;0\nWireConnection;55;2;23;0\nWireConnection;18;0;19;0\nWireConnection;34;0;66;0\nWireConnection;92;0;53;0\nASEEND*/\n//CHKSM=1C8725EE4121C591CBF00B28720272E034D6BDA0"
+  m_functionName: 
+  m_description: DECSF Common Water Refraction Standard
+  m_additionalIncludes:
+    m_additionalIncludes: []
+    m_outsideIncludes: []
+  m_additionalPragmas:
+    m_additionalPragmas: []
+    m_outsidePragmas: []
+  m_additionalDirectives:
+    m_validData: 0
+    m_isDirty: 0
+    m_moduleName: ' Additional Directives'
+    m_independentModule: 1
+    m_additionalDirectives: []
+    m_shaderFunctionDirectives: []
+    m_nativeDirectives: []
+    m_nativeDirectivesIndex: -1
+    m_nativeDirectivesFoldout: 0
+    m_directivesSaveItems: []
+  m_nodeCategory: 0
+  m_customNodeCategory: DECSF
+  m_previewPosition: 0
+  m_hidden: 0

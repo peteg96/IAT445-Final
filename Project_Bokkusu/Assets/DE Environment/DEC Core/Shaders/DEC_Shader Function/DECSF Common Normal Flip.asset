@@ -1,0 +1,51 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78b2425a2284af743826c689403a4924, type: 3}
+  m_Name: DECSF Common Normal Flip
+  m_EditorClassIdentifier: 
+  m_functionInfo: "// Made with Amplify Shader Editor\n// Available at the Unity
+    Asset Store - http://u3d.as/y3X \n/*ASEBEGIN\nVersion=18502\n1982;67;1076;952;1772.557;1370.204;2.490973;True;False\nNode;AmplifyShaderEditor.CommentaryNode;23;-992.9333,-542.9988;Inherit;False;384.3573;146.2507;Normal
+    In;2;17;7;;0.08490568,0.08490568,0.08490568,1;0;0\nNode;AmplifyShaderEditor.RegisterLocalVarNode;17;-813.4648,-496.8208;Inherit;False;NORMAL_IN;-1;True;1;0;FLOAT3;0,0,0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.FunctionInput;7;-972.2365,-495.1852;Inherit;False;NORMAL_IN;3;0;False;1;0;FLOAT3;0,0,0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.GetLocalVarNode;20;-625.8131,-355.3796;Inherit;False;17;NORMAL_IN;1;0;OBJECT;;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.WorldNormalVector;6;297.5044,-153.4957;Inherit;False;True;1;0;FLOAT3;0,0,0;False;4;FLOAT3;0;FLOAT;1;FLOAT;2;FLOAT;3\nNode;AmplifyShaderEditor.GetLocalVarNode;19;-174.7985,-109.4873;Inherit;False;17;NORMAL_IN;1;0;OBJECT;;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.FaceVariableNode;5;-634.8191,-86.51479;Inherit;False;0;1;FLOAT;0\nNode;AmplifyShaderEditor.GetLocalVarNode;22;-921.3936,-211.4116;Inherit;False;17;NORMAL_IN;1;0;OBJECT;;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.DynamicAppendNode;3;-383.8621,-206.0091;Inherit;False;FLOAT3;4;0;FLOAT;0;False;1;FLOAT;0;False;2;FLOAT;0;False;3;FLOAT;0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.SimpleMultiplyOpNode;4;-513.0891,-116.9823;Inherit;False;2;2;0;FLOAT;0;False;1;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.FunctionSwitchByPipeline;16;59.33661,-295.3133;Inherit;False;4;0;FLOAT3;0,0,0;False;3;FLOAT3;0,0,0;False;1;FLOAT3;0,0,0;False;2;FLOAT3;0,0,0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.WorldNormalVector;13;300.221,-294.1777;Inherit;False;False;1;0;FLOAT3;0,0,0;False;4;FLOAT3;0;FLOAT;1;FLOAT;2;FLOAT;3\nNode;AmplifyShaderEditor.FaceVariableNode;8;-557.3059,-274.4777;Inherit;False;0;1;FLOAT;0\nNode;AmplifyShaderEditor.GetLocalVarNode;21;-430.8827,-370.6682;Inherit;False;17;NORMAL_IN;1;0;OBJECT;;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.IntNode;10;-419.4477,-464.5269;Inherit;False;Property;_NormalMode;Normal
+    Mode;0;1;[Enum];Create;False;3;Default;0;Flip;1;Mirror;2;0;False;0;False;0;0;False;0;1;INT;0\nNode;AmplifyShaderEditor.SimpleMultiplyOpNode;1;-388.2362,-300.9498;Inherit;False;2;2;0;FLOAT3;0,0,0;False;1;FLOAT;0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.CustomExpressionNode;9;-187.5824,-271.9679;Inherit;False;if(m_switch
+    == 0)$\treturn m_Default@$if(m_switch == 1)$\treturn m_Flip@$if(m_switch == 2)$\treturn
+    m_Mirror@$$return m_Default@;3;False;4;True;m_switch;INT;0;In;;Inherit;False;True;m_Default;FLOAT3;0,0,0;In;;Inherit;False;True;m_Flip;FLOAT3;0,0,0;In;;Inherit;False;True;m_Mirror;FLOAT3;0,0,0;In;;Inherit;False;float3
+    switch ;True;False;0;4;0;INT;0;False;1;FLOAT3;0,0,0;False;2;FLOAT3;0,0,0;False;3;FLOAT3;0,0,0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.BreakToComponentsNode;2;-737.424,-205.8979;Inherit;False;FLOAT3;1;0;FLOAT3;0,0,0;False;16;FLOAT;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4;FLOAT;5;FLOAT;6;FLOAT;7;FLOAT;8;FLOAT;9;FLOAT;10;FLOAT;11;FLOAT;12;FLOAT;13;FLOAT;14;FLOAT;15\nNode;AmplifyShaderEditor.FunctionOutput;15;505.9193,-297.6711;Inherit;False;False;-1;NORMAL_WORLD_OUT;2;False;1;0;FLOAT3;0,0,0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.FunctionOutput;11;297.3968,-390.9152;Inherit;False;True;-1;NORMAL_OUT;0;True;1;0;FLOAT3;0,0,0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.FunctionOutput;12;510.4226,-152.8782;Inherit;False;False;-1;NORMALIZED_NORMAL_WORLD_OUT;1;False;1;0;FLOAT3;0,0,0;False;1;FLOAT3;0\nWireConnection;17;0;7;0\nWireConnection;6;0;16;0\nWireConnection;3;0;2;0\nWireConnection;3;1;2;1\nWireConnection;3;2;4;0\nWireConnection;4;0;2;2\nWireConnection;4;1;5;0\nWireConnection;16;0;9;0\nWireConnection;16;3;9;0\nWireConnection;16;1;9;0\nWireConnection;16;2;19;0\nWireConnection;13;0;16;0\nWireConnection;1;0;20;0\nWireConnection;1;1;8;0\nWireConnection;9;0;10;0\nWireConnection;9;1;21;0\nWireConnection;9;2;1;0\nWireConnection;9;3;3;0\nWireConnection;2;0;22;0\nWireConnection;15;0;13;0\nWireConnection;11;0;16;0\nWireConnection;12;0;6;0\nASEEND*/\n//CHKSM=654EEF3708568DF0BE62D0708DFFB492C0B4C274"
+  m_functionName: 
+  m_description: 'Common Normal Flip
+
+    - Default = Unity Standard
+
+    - Flip
+
+    -
+    Mirror'
+  m_additionalIncludes:
+    m_additionalIncludes: []
+    m_outsideIncludes: []
+  m_additionalPragmas:
+    m_additionalPragmas: []
+    m_outsidePragmas: []
+  m_additionalDirectives:
+    m_validData: 0
+    m_isDirty: 0
+    m_moduleName: ' Additional Directives'
+    m_independentModule: 1
+    m_additionalDirectives: []
+    m_shaderFunctionDirectives: []
+    m_nativeDirectives: []
+    m_nativeDirectivesIndex: -1
+    m_nativeDirectivesFoldout: 0
+    m_directivesSaveItems: []
+  m_nodeCategory: 0
+  m_customNodeCategory: DECSF
+  m_previewPosition: 0
+  m_hidden: 0
